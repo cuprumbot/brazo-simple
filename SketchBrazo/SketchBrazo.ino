@@ -1,13 +1,3 @@
-
-/* Sweep
- by BARRAGAN <http://barraganstudio.com>
- This example code is in the public domain.
-
- modified 8 Nov 2013
- by Scott Fitzgerald
- http://www.arduino.cc/en/Tutorial/Sweep
-*/
-
 #include <Servo.h>
 int val= 0, trash, newval= 0, state=0, reading, numservo = 0;
 
@@ -89,7 +79,7 @@ void loop() {
       }else if(numservo == 0){
         reading = map(reading,0,90,90,0);
       }else if(numservo == 3){
-        reading = map(reading,0,90,90,155);
+        reading = map(reading,-90,90,5,175);
       }
       posns[numservo]=reading;
       //Serial.println(newval);
